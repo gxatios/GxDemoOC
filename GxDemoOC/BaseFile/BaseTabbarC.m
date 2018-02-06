@@ -50,7 +50,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBar.backgroundColor = [UIColor whiteColor];
+    self.tabBar.backgroundColor = [UIColor orangeColor];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabIndexAction:) name:Notifi_Tabbar_Index object:nil];
     
     CGMutablePathRef path = CGPathCreateMutable();
@@ -82,7 +82,6 @@
     UIStoryboard *threeSB = [UIStoryboard storyboardWithName:@"third" bundle:nil];
     ThirdViewC *threeVC = [threeSB instantiateViewControllerWithIdentifier:@"ThirdViewC"];
     BaseNavController *threeNav = [[BaseNavController alloc] initWithRootViewController:threeVC];
-    UIStoryboard *fourStoryBoard = [UIStoryboard storyboardWithName:@"fourth" bundle:nil];
 
     
     oneNav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@"Group 20"] tag:0];

@@ -1,9 +1,9 @@
 //
 //  RequestHttp.h
-//  c_app_ios
+//  gx
 //
 //  Created by Gx on 15/8/13.
-//  Copyright (c) 2015年 c_app_ios. All rights reserved.
+//  Copyright (c) 2015年 gx. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -21,6 +21,7 @@
 
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     [self buildBackItem];
+    self.title = @"默认title";
 }
 
 -(void)viewWillAppear:(BOOL)animated{

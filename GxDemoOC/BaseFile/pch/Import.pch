@@ -29,3 +29,5 @@
 #import "UpDataInfoObject.h"
 
 #import "GxUserInfo.h"
+
+#import "NSDictionary+Rigorous.h"

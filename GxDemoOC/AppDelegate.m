@@ -48,7 +48,8 @@
         };
     }
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+//    [UIApplication sharedApplication].keyWindow.preferredStatusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;
 }
@@ -91,7 +92,7 @@
 - (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier{
     return NO;
 }
--(void)loginOutMethod{
+-(void)userLoginOut{
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:Login_User_IsLogin];
     [GxUserInfo sharedInstance].token = nil;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
