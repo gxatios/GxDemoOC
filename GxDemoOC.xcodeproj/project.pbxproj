@@ -61,6 +61,7 @@
 		E4EDBDE4202993F40050E887 /* DemoSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDE3202993F40050E887 /* DemoSessionManager.m */; };
 		E4EDBDE7202994880050E887 /* DemoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDE6202994880050E887 /* DemoRequest.m */; };
 		E4EDBDEA202997110050E887 /* DemoDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDE9202997110050E887 /* DemoDataModel.m */; };
+		E4EDBDED20299B3A0050E887 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDEB20299B3A0050E887 /* UIView+ScreenShot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,8 @@
 		E4EDBDE6202994880050E887 /* DemoRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoRequest.m; sourceTree = "<group>"; };
 		E4EDBDE8202997110050E887 /* DemoDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoDataModel.h; sourceTree = "<group>"; };
 		E4EDBDE9202997110050E887 /* DemoDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoDataModel.m; sourceTree = "<group>"; };
+		E4EDBDEB20299B3A0050E887 /* UIView+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenShot.m"; sourceTree = "<group>"; };
+		E4EDBDEC20299B3A0050E887 /* UIView+ScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenShot.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,16 +364,18 @@
 		E4EDBD84202992560050E887 /* UIViewExt */ = {
 			isa = PBXGroup;
 			children = (
-				E4EDBD85202992560050E887 /* NSObject+AddCate.m */,
+				E4EDBDEC20299B3A0050E887 /* UIView+ScreenShot.h */,
+				E4EDBDEB20299B3A0050E887 /* UIView+ScreenShot.m */,
 				E4EDBD86202992560050E887 /* UILabel+Copy.h */,
-				E4EDBD87202992560050E887 /* UIImage+ImageWithColor.h */,
-				E4EDBD88202992560050E887 /* UIView+Additions.m */,
-				E4EDBD89202992560050E887 /* UIViewExt.m */,
-				E4EDBD8A202992560050E887 /* NSObject+AddCate.h */,
-				E4EDBD8B202992560050E887 /* UIImage+ImageWithColor.m */,
 				E4EDBD8C202992560050E887 /* UILabel+Copy.m */,
+				E4EDBD87202992560050E887 /* UIImage+ImageWithColor.h */,
+				E4EDBD8B202992560050E887 /* UIImage+ImageWithColor.m */,
+				E4EDBD8A202992560050E887 /* NSObject+AddCate.h */,
+				E4EDBD85202992560050E887 /* NSObject+AddCate.m */,
 				E4EDBD8D202992560050E887 /* UIView+Additions.h */,
+				E4EDBD88202992560050E887 /* UIView+Additions.m */,
 				E4EDBD8E202992560050E887 /* UIViewExt.h */,
+				E4EDBD89202992560050E887 /* UIViewExt.m */,
 			);
 			path = UIViewExt;
 			sourceTree = "<group>";
@@ -637,6 +642,7 @@
 				E41D0DDB1F4A7DC600F69A76 /* ViewController.m in Sources */,
 				E40FCC731F58F33400539B43 /* AgreeInfoViewController.m in Sources */,
 				E4EDBDD5202992570050E887 /* TQStarRatingView.m in Sources */,
+				E4EDBDED20299B3A0050E887 /* UIView+ScreenShot.m in Sources */,
 				E4EDBDC7202992570050E887 /* UILabel+Copy.m in Sources */,
 				E44073821F53AB5A005EC4EA /* BaseViewController.m in Sources */,
 				E4EDBDD8202992570050E887 /* RadioButton.m in Sources */,

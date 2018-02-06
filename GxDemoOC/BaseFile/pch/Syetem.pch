@@ -34,7 +34,7 @@
 #define SafeAreaTopHeight (SCREEN_HEIGHT == 812.0 ? 88 : 64)
 #define SafeAreaBottomHeight (SCREEN_HEIGHT == 812.0 ? 34 : 0)
 
-
+#define PhoneScale_all (AppWidth/320.00)
 
 
 /*防止Block引用循环*/
