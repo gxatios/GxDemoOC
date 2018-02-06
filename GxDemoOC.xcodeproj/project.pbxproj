@@ -62,6 +62,20 @@
 		E4EDBDE7202994880050E887 /* DemoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDE6202994880050E887 /* DemoRequest.m */; };
 		E4EDBDEA202997110050E887 /* DemoDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDE9202997110050E887 /* DemoDataModel.m */; };
 		E4EDBDED20299B3A0050E887 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDEB20299B3A0050E887 /* UIView+ScreenShot.m */; };
+		E4EDBE1020299DDA0050E887 /* NSPredicateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDF020299DDA0050E887 /* NSPredicateViewController.m */; };
+		E4EDBE1120299DDA0050E887 /* NSDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDF320299DDA0050E887 /* NSDataViewController.m */; };
+		E4EDBE1220299DDA0050E887 /* LocateSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDF420299DDA0050E887 /* LocateSaveViewController.m */; };
+		E4EDBE1320299DDA0050E887 /* quotes.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4EDBDF620299DDA0050E887 /* quotes.plist */; };
+		E4EDBE1420299DDA0050E887 /* SellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDF920299DDA0050E887 /* SellViewController.m */; };
+		E4EDBE1520299DDA0050E887 /* AnimaTryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBDFB20299DDA0050E887 /* AnimaTryViewController.m */; };
+		E4EDBE1620299DDA0050E887 /* ScreenCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0020299DDA0050E887 /* ScreenCatchViewController.m */; };
+		E4EDBE1720299DDA0050E887 /* UIView+ScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0120299DDA0050E887 /* UIView+ScreenShot.m */; };
+		E4EDBE1820299DDA0050E887 /* FunctionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0220299DDA0050E887 /* FunctionsViewController.m */; };
+		E4EDBE1920299DDA0050E887 /* transluView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0620299DDA0050E887 /* transluView.m */; };
+		E4EDBE1A20299DDA0050E887 /* GxDrawViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0820299DDA0050E887 /* GxDrawViewsViewController.m */; };
+		E4EDBE1B20299DDA0050E887 /* UIView+ImageShot.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0A20299DDA0050E887 /* UIView+ImageShot.m */; };
+		E4EDBE1C20299DDA0050E887 /* DrawCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0C20299DDA0050E887 /* DrawCircleViewController.m */; };
+		E4EDBE1D20299DDA0050E887 /* DrawCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4EDBE0D20299DDA0050E887 /* DrawCircleView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +191,33 @@
 		E4EDBDE9202997110050E887 /* DemoDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoDataModel.m; sourceTree = "<group>"; };
 		E4EDBDEB20299B3A0050E887 /* UIView+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenShot.m"; sourceTree = "<group>"; };
 		E4EDBDEC20299B3A0050E887 /* UIView+ScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenShot.h"; sourceTree = "<group>"; };
+		E4EDBDF020299DDA0050E887 /* NSPredicateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPredicateViewController.m; sourceTree = "<group>"; };
+		E4EDBDF120299DDA0050E887 /* LocateSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocateSaveViewController.h; sourceTree = "<group>"; };
+		E4EDBDF220299DDA0050E887 /* NSDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataViewController.h; sourceTree = "<group>"; };
+		E4EDBDF320299DDA0050E887 /* NSDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataViewController.m; sourceTree = "<group>"; };
+		E4EDBDF420299DDA0050E887 /* LocateSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocateSaveViewController.m; sourceTree = "<group>"; };
+		E4EDBDF520299DDA0050E887 /* NSPredicateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPredicateViewController.h; sourceTree = "<group>"; };
+		E4EDBDF620299DDA0050E887 /* quotes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = quotes.plist; sourceTree = "<group>"; };
+		E4EDBDF820299DDA0050E887 /* FunctionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionsViewController.h; sourceTree = "<group>"; };
+		E4EDBDF920299DDA0050E887 /* SellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SellViewController.m; sourceTree = "<group>"; };
+		E4EDBDFB20299DDA0050E887 /* AnimaTryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimaTryViewController.m; sourceTree = "<group>"; };
+		E4EDBDFC20299DDA0050E887 /* AnimaTryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimaTryViewController.h; sourceTree = "<group>"; };
+		E4EDBDFE20299DDA0050E887 /* ScreenCatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenCatchViewController.h; sourceTree = "<group>"; };
+		E4EDBDFF20299DDA0050E887 /* UIView+ScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScreenShot.h"; sourceTree = "<group>"; };
+		E4EDBE0020299DDA0050E887 /* ScreenCatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScreenCatchViewController.m; sourceTree = "<group>"; };
+		E4EDBE0120299DDA0050E887 /* UIView+ScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScreenShot.m"; sourceTree = "<group>"; };
+		E4EDBE0220299DDA0050E887 /* FunctionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionsViewController.m; sourceTree = "<group>"; };
+		E4EDBE0320299DDA0050E887 /* SellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SellViewController.h; sourceTree = "<group>"; };
+		E4EDBE0520299DDA0050E887 /* UIView+ImageShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ImageShot.h"; sourceTree = "<group>"; };
+		E4EDBE0620299DDA0050E887 /* transluView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = transluView.m; sourceTree = "<group>"; };
+		E4EDBE0720299DDA0050E887 /* GxDrawViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GxDrawViewsViewController.h; sourceTree = "<group>"; };
+		E4EDBE0820299DDA0050E887 /* GxDrawViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GxDrawViewsViewController.m; sourceTree = "<group>"; };
+		E4EDBE0920299DDA0050E887 /* transluView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = transluView.h; sourceTree = "<group>"; };
+		E4EDBE0A20299DDA0050E887 /* UIView+ImageShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ImageShot.m"; sourceTree = "<group>"; };
+		E4EDBE0C20299DDA0050E887 /* DrawCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCircleViewController.m; sourceTree = "<group>"; };
+		E4EDBE0D20299DDA0050E887 /* DrawCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCircleView.m; sourceTree = "<group>"; };
+		E4EDBE0E20299DDA0050E887 /* DrawCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCircleViewController.h; sourceTree = "<group>"; };
+		E4EDBE0F20299DDA0050E887 /* DrawCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCircleView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +363,7 @@
 		E4EDBD0820297F660050E887 /* ExtraFile */ = {
 			isa = PBXGroup;
 			children = (
+				E4EDBDEE20299DDA0050E887 /* UIViewC */,
 				E4EDBD9C202992560050E887 /* BridgeFile */,
 				E4EDBD9F202992560050E887 /* DataFile */,
 				E4EDBD8F202992560050E887 /* NSObjectExt */,
@@ -493,6 +535,88 @@
 			path = FiveStartView;
 			sourceTree = "<group>";
 		};
+		E4EDBDEE20299DDA0050E887 /* UIViewC */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBDEF20299DDA0050E887 /* Locate */,
+				E4EDBDF720299DDA0050E887 /* DrawAndImage */,
+			);
+			path = UIViewC;
+			sourceTree = "<group>";
+		};
+		E4EDBDEF20299DDA0050E887 /* Locate */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBDF020299DDA0050E887 /* NSPredicateViewController.m */,
+				E4EDBDF120299DDA0050E887 /* LocateSaveViewController.h */,
+				E4EDBDF220299DDA0050E887 /* NSDataViewController.h */,
+				E4EDBDF320299DDA0050E887 /* NSDataViewController.m */,
+				E4EDBDF420299DDA0050E887 /* LocateSaveViewController.m */,
+				E4EDBDF520299DDA0050E887 /* NSPredicateViewController.h */,
+				E4EDBDF620299DDA0050E887 /* quotes.plist */,
+			);
+			path = Locate;
+			sourceTree = "<group>";
+		};
+		E4EDBDF720299DDA0050E887 /* DrawAndImage */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBDF820299DDA0050E887 /* FunctionsViewController.h */,
+				E4EDBDF920299DDA0050E887 /* SellViewController.m */,
+				E4EDBDFA20299DDA0050E887 /* AnimationViews */,
+				E4EDBDFD20299DDA0050E887 /* ScreenCatch */,
+				E4EDBE0220299DDA0050E887 /* FunctionsViewController.m */,
+				E4EDBE0320299DDA0050E887 /* SellViewController.h */,
+				E4EDBE0420299DDA0050E887 /* DrawImageViews */,
+				E4EDBE0B20299DDA0050E887 /* DrawCircles */,
+			);
+			path = DrawAndImage;
+			sourceTree = "<group>";
+		};
+		E4EDBDFA20299DDA0050E887 /* AnimationViews */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBDFB20299DDA0050E887 /* AnimaTryViewController.m */,
+				E4EDBDFC20299DDA0050E887 /* AnimaTryViewController.h */,
+			);
+			path = AnimationViews;
+			sourceTree = "<group>";
+		};
+		E4EDBDFD20299DDA0050E887 /* ScreenCatch */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBDFE20299DDA0050E887 /* ScreenCatchViewController.h */,
+				E4EDBDFF20299DDA0050E887 /* UIView+ScreenShot.h */,
+				E4EDBE0020299DDA0050E887 /* ScreenCatchViewController.m */,
+				E4EDBE0120299DDA0050E887 /* UIView+ScreenShot.m */,
+			);
+			path = ScreenCatch;
+			sourceTree = "<group>";
+		};
+		E4EDBE0420299DDA0050E887 /* DrawImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBE0520299DDA0050E887 /* UIView+ImageShot.h */,
+				E4EDBE0620299DDA0050E887 /* transluView.m */,
+				E4EDBE0720299DDA0050E887 /* GxDrawViewsViewController.h */,
+				E4EDBE0820299DDA0050E887 /* GxDrawViewsViewController.m */,
+				E4EDBE0920299DDA0050E887 /* transluView.h */,
+				E4EDBE0A20299DDA0050E887 /* UIView+ImageShot.m */,
+			);
+			path = DrawImageViews;
+			sourceTree = "<group>";
+		};
+		E4EDBE0B20299DDA0050E887 /* DrawCircles */ = {
+			isa = PBXGroup;
+			children = (
+				E4EDBE0C20299DDA0050E887 /* DrawCircleViewController.m */,
+				E4EDBE0D20299DDA0050E887 /* DrawCircleView.m */,
+				E4EDBE0E20299DDA0050E887 /* DrawCircleViewController.h */,
+				E4EDBE0F20299DDA0050E887 /* DrawCircleView.h */,
+			);
+			path = DrawCircles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -566,6 +690,7 @@
 				E4EDBD132029824D0050E887 /* first.storyboard in Resources */,
 				E4EDBDD4202992570050E887 /* foregroundStar.png in Resources */,
 				E4EDBDD3202992570050E887 /* backgroundStar.png in Resources */,
+				E4EDBE1320299DDA0050E887 /* quotes.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,34 +755,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EDBE1120299DDA0050E887 /* NSDataViewController.m in Sources */,
 				E4EDBDC4202992570050E887 /* UIView+Additions.m in Sources */,
 				E4EDBDC8202992570050E887 /* SelectorProtector.m in Sources */,
 				E4EDBDC6202992570050E887 /* UIImage+ImageWithColor.m in Sources */,
+				E4EDBE1720299DDA0050E887 /* UIView+ScreenShot.m in Sources */,
 				E4EDBDE4202993F40050E887 /* DemoSessionManager.m in Sources */,
 				E4EDBDD9202992570050E887 /* MultiSelectTableView.m in Sources */,
 				E4EDBD0E202981850050E887 /* BaseTabbarC.m in Sources */,
+				E4EDBE1B20299DDA0050E887 /* UIView+ImageShot.m in Sources */,
 				E4EDBDE7202994880050E887 /* DemoRequest.m in Sources */,
 				E4EDBDC9202992570050E887 /* NSString+replaceUnicode.m in Sources */,
 				E4EDBDCD202992570050E887 /* NSDictionary+Rigorous.m in Sources */,
 				E41D0DDB1F4A7DC600F69A76 /* ViewController.m in Sources */,
 				E40FCC731F58F33400539B43 /* AgreeInfoViewController.m in Sources */,
+				E4EDBE1420299DDA0050E887 /* SellViewController.m in Sources */,
+				E4EDBE1020299DDA0050E887 /* NSPredicateViewController.m in Sources */,
 				E4EDBDD5202992570050E887 /* TQStarRatingView.m in Sources */,
 				E4EDBDED20299B3A0050E887 /* UIView+ScreenShot.m in Sources */,
 				E4EDBDC7202992570050E887 /* UILabel+Copy.m in Sources */,
+				E4EDBE1C20299DDA0050E887 /* DrawCircleViewController.m in Sources */,
 				E44073821F53AB5A005EC4EA /* BaseViewController.m in Sources */,
 				E4EDBDD8202992570050E887 /* RadioButton.m in Sources */,
+				E4EDBE1920299DDA0050E887 /* transluView.m in Sources */,
+				E4EDBE1A20299DDA0050E887 /* GxDrawViewsViewController.m in Sources */,
 				E4EDBDD6202992570050E887 /* ZWIntroductionViewController.m in Sources */,
 				E4EC99D31F53A8FF00028065 /* RequestHttp.m in Sources */,
 				E4EDBDD2202992570050E887 /* MacroDataObject.m in Sources */,
 				4004A9311F54472A006732E0 /* RegisterViewController.m in Sources */,
+				E4EDBE1520299DDA0050E887 /* AnimaTryViewController.m in Sources */,
 				4004A9341F544757006732E0 /* LoginForgetViewController.m in Sources */,
 				E4EDBDC3202992570050E887 /* NSObject+AddCate.m in Sources */,
+				E4EDBE1820299DDA0050E887 /* FunctionsViewController.m in Sources */,
 				E4EDBDDA202992570050E887 /* PopupListViewController.m in Sources */,
 				E4EDBD55202983070050E887 /* FirstViewC.m in Sources */,
 				E4EDBDD0202992570050E887 /* UpDataInfoObject.m in Sources */,
 				E4EDBDCB202992570050E887 /* NSDictionary+URLParam.m in Sources */,
 				E4EDBDE1202992C70050E887 /* QFSaveCacheFile.m in Sources */,
 				E4EDBDCA202992570050E887 /* NSObject+SelectorProtect.m in Sources */,
+				E4EDBE1D20299DDA0050E887 /* DrawCircleView.m in Sources */,
 				E41D0DD81F4A7DC600F69A76 /* AppDelegate.m in Sources */,
 				E4EDBDDB202992570050E887 /* UpImgView.m in Sources */,
 				E4EDBDD1202992570050E887 /* GTMBase64.m in Sources */,
@@ -671,6 +807,8 @@
 				4004A92E1F544277006732E0 /* LoginViewController.m in Sources */,
 				E4EDBD58202983100050E887 /* SecondViewC.m in Sources */,
 				E4EDBDD7202992570050E887 /* ZXUploadImage.m in Sources */,
+				E4EDBE1620299DDA0050E887 /* ScreenCatchViewController.m in Sources */,
+				E4EDBE1220299DDA0050E887 /* LocateSaveViewController.m in Sources */,
 				E4EDBDC5202992570050E887 /* UIViewExt.m in Sources */,
 				E4EDBDDC202992570050E887 /* FiveStartView.m in Sources */,
 			);
