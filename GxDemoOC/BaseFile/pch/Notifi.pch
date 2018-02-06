@@ -1,0 +1,32 @@
+//
+//  Notifi.pch
+//  GxDemoOC
+//
+//  Created by zhxGx on 2018/2/6.
+//  Copyright © 2018年 gx. All rights reserved.
+//
+
+#ifndef Notifi_pch
+#define Notifi_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Notifi_pch */
+
+#define Notifi_Login_NO @"Notifi_Login_NO"
+#define Notifi_chkVersionFinish  @"Notifi_chkVersionFinish"
+#define Notifi_chkVersionFinishWithoutMain  @"Notifi_chkVersionFinishWithoutMain"
+
+#define Notifi_Tabbar_Index         @"Notifi_Tabbar_Index" // tabbar 切换的通知
+#define Notifi_Timer_Tabbar         @"Notifi_Timer_Tabbar" // 时间轮询任务的通知
+#define Notifi_First_Tab            @"Notifi_First_Tab"     // tabbar first的通知
+#define Notifi_Second_Tab           @"Notifi_Second_Tab"
+#define Notifi_Third_Tab            @"Notifi_Third_Tab"
+
+#define Notifi_Login_Out @"Notifi_Login_Out"
+
+#define Notifi_PaySuccess_WX        @"Notifi_PaySuccess_WX"
+
+
+#define Notifi_Memssage_Timer       @"Notifi_Memssage_Timer"

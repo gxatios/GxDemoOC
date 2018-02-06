@@ -66,11 +66,8 @@
         [MacroMethodObject showHudTextinWindow:@"请输入正确的手机号"];
         return;
     }
-    
     NSMutableDictionary *dicOne = [[NSMutableDictionary alloc] init];
-    [dicOne setValue:Opt_Vcode forKey:@"opt"];
-    [dicOne setValue:phoneStr forKey:@"mobile"];
-    [dicOne setValue:@"2" forKey:@"validateType"];
+
     [RequestHttp requestPOSTWithDic:dicOne requestSuccess:^(id result) {
         NSString *error = [NSString stringWithFormat:@"%@",result[@"error"]];
         if ([error isEqualToString:@"1"]) {
@@ -116,11 +113,7 @@
         return;
     }
     NSMutableDictionary *dicOne = [[NSMutableDictionary alloc] init];
-    [dicOne setValue:Opt_NewPw forKey:@"opt"];
-    [dicOne setValue:phoneStr forKey:@"mobile"];
-    [dicOne setValue:pwStr forKey:@"newpwd"];
-    [dicOne setValue:vcodeStr forKey:@"randomCode"];
-    [dicOne setValue:rePwStr forKey:@"confirmPassword"];
+
     [RequestHttp requestPOSTWithDic:dicOne requestSuccess:^(id result) {
         NSString *error = [NSString stringWithFormat:@"%@",result[@"error"]];
         if ([error isEqualToString:@"1"]) {

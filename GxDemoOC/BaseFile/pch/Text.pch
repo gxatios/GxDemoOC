@@ -1,0 +1,19 @@
+//
+//  Text.pch
+//  GxDemoOC
+//
+//  Created by zhxGx on 2018/2/6.
+//  Copyright © 2018年 gx. All rights reserved.
+//
+
+#ifndef Text_pch
+#define Text_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Text_pch */
+
+#define Text_FingerCode_TimeOut @"网络繁忙,请重试."
+#define Test_SafeCode_GetFail @"网络繁忙，请稍后重试或与客服联系."
+

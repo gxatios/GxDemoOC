@@ -17,9 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSString *testStr = Login_User_Phone;
-    NSLog(@"%@",testStr);
-    [self getSiftFirstrequest];
+
 }
 
 

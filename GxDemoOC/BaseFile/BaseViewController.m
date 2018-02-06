@@ -17,18 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [MacroMethodObject colorWithHexString:@"#f5f5f5"];
-    // Do any additional setup after loading the view. // html
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName,nil]];
-    self.navigationController.navigationBar.barTintColor = HEXCOLOR(0x3A90FF);
- //   self.navigationController.navigationBar.barTintColor = RGBCOLOR(79, 140, 232, 1);
-   
-/*
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(transformView:)
-                                                 name:UIKeyboardWillChangeFrameNotification
-                                               object:nil];  */
+    self.view.backgroundColor = [UIColor whiteColor];
 
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
     [self buildBackItem];
 }
 
@@ -68,17 +59,22 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"%@ -> 内存警告！  来自 -> %@",[self class],[self title]);
+}
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    //导航的rootViewController关闭右滑返回功能
+    if (self.navigationController.viewControllers.count <= 1){
+        return NO;
+    }
+    return YES;
 }
 -(void)transformView:(NSNotification *)aNSNotification
 {
     //获取键盘弹出前的Rect
     NSValue *keyBoardBeginBounds=[[aNSNotification userInfo]objectForKey:UIKeyboardFrameBeginUserInfoKey];
     CGRect beginRect=[keyBoardBeginBounds CGRectValue];
-    
     //获取键盘弹出后的Rect
     NSValue *keyBoardEndBounds=[[aNSNotification userInfo]objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect  endRect=[keyBoardEndBounds CGRectValue];

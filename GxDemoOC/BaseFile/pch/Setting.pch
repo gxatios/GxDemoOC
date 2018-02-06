@@ -1,0 +1,63 @@
+//
+//  Setting.pch
+//  GxDemoOC
+//
+//  Created by zhxGx on 2018/2/6.
+//  Copyright © 2018年 gx. All rights reserved.
+//
+
+#ifndef Setting_pch
+#define Setting_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Setting_pch */
+
+#define Net_Host @"www.baidu.com"
+#define Net_Image_Host @"www.baidu.com"
+
+// NET
+#define KTimeoutInterval 9.0 // 接口超时时间
+
+
+//验证码重发时间限制
+#define CodeTimeCount 60
+#define CodeDateTimeSave @"CodeDateTimeSave"
+
+// 默认图
+#define Image_Selected_Small @"register_agree_green"
+#define Image_UnSelected_Small @"register_agree_grep"
+#define ZIHEXINDefailImage [UIImage imageNamed:@"资和信默认图"]
+#define ZHXDefailZImage [UIImage imageNamed:@"资和信默认图中"]
+
+
+
+// 页面背景图片
+
+// 顶部nav颜色
+
+// 底部tab颜色
+
+
+// 按钮背景颜色
+
+// 按钮文字颜色
+
+//  大字颜色
+
+//
+
+// 文本标题颜色  字号 字体
+
+// 文本内容颜色 字号 字体
+
+//  文本备注颜色  字号  字体
+
+
+
+
+
+// other
+#define App_Launch_First @"App_Launch_First"
+

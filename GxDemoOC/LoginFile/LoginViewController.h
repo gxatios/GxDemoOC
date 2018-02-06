@@ -12,5 +12,5 @@ typedef void(^LoginViewSuccessBlock) ();
 
 @interface LoginViewController : BaseViewController
 
-@property (nonatomic,copy) LoginViewSuccessBlock loginBlock;
+@property (nonatomic,copy) LoginViewSuccessBlock loginSuccessBlock;
 @end

@@ -96,7 +96,6 @@
     NSString *pwStr = _pwTF.text;
     NSString *vcodeStr = _vcodeTF.text;
     NSString *invertStr = _inviteTF.text;
-    NSString *desPWStr = [MacroMethodObject encrypt3DES:pwStr key:Key_DES_PW];
     if (vcodeStr.length != 6) {
         [MacroMethodObject showHudTextinWindow:@"请输入正确的验证码"];
         return;
@@ -107,42 +106,12 @@
         return;
     }
     
-    [dicOne setValue:Opt_Register forKey:@"opt"];
-    [dicOne setValue:phoneStr forKey:@"mobile"];
-    [dicOne setValue:desPWStr forKey:@"pwd"];
-    [dicOne setValue:vcodeStr forKey:@"randCode"];
-    [dicOne setValue:@"2" forKey:@"deviceType"];
-    [dicOne setValue:invertStr forKey:@"recommendMobile"];
-//    [dicOne setValue:@"post" forKey:@"type"];
+
     [RequestHttp requestPOSTWithDic:dicOne requestSuccess:^(id result) {
         NSString *error = [NSString stringWithFormat:@"%@",result[@"error"]];
         if ([error isEqualToString:@"1"]) {
             
-            NSString *mobile = [NSString stringWithFormat:@"%@",result[@"mobile"]];
-            NSString *idStr = [NSString stringWithFormat:@"%@",result[@"id"]];
-            NSString *username = [NSString stringWithFormat:@"%@",result[@"userName"]];
-            NSString *headImg = [NSString stringWithFormat:@"%@",result[@"headImg"]];
-            //            NSString *sex = [NSString stringWithFormat:@"%@",result[@"sex"]];
-            NSString *realName = [NSString stringWithFormat:@"%@",result[@"realName"]];
-            NSString *role = [NSString stringWithFormat:@"%@",result[@"role"]];
-            NSString *countMsgUnread = [NSString stringWithFormat:@"%@",result[@"countMsgUnread"]];
-            NSString *isSign = [NSString stringWithFormat:@"%@",result[@"isSign"]];
-            NSString *qrCode = [NSString stringWithFormat:@"%@",result[@"qrCode"]];
-            NSString *score = [NSString stringWithFormat:@"%@",result[@"score"]];
-            NSString *empRole = [NSString stringWithFormat:@"%@",result[@"empRole"]];
-            
-            [[NSUserDefaults standardUserDefaults] setValue:isSign forKey:Login_User_IsSign];
-            [[NSUserDefaults standardUserDefaults] setValue:qrCode forKey:Login_User_QrCode];
-            [[NSUserDefaults standardUserDefaults] setValue:score forKey:Login_User_Score];
-            [[NSUserDefaults standardUserDefaults] setValue:countMsgUnread forKey:Login_User_CountMsgUnread];
-            [[NSUserDefaults standardUserDefaults] setValue:role forKey:Login_User_Role]; // 0客户 1 员工
-            //            [[NSUserDefaults standardUserDefaults] setValue:sex forKey:Login_User_Sex];
-            [[NSUserDefaults standardUserDefaults] setValue:headImg forKey:Login_User_HeadImg];
-            [[NSUserDefaults standardUserDefaults] setValue:idStr forKey:Login_User_Id];
-            [[NSUserDefaults standardUserDefaults] setValue:mobile forKey:Login_User_Phone];
-            [[NSUserDefaults standardUserDefaults] setValue:realName forKey:Login_User_RealName];
-            [[NSUserDefaults standardUserDefaults] setValue:username forKey:Login_User_NickName];
-            [[NSUserDefaults standardUserDefaults] setValue:username forKey:Login_User_Role_Emp];
+
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:Login_User_IsLogin];
             [[NSUserDefaults standardUserDefaults] synchronize];
             [MacroMethodObject showHudTextinWindow:result[@"msg"]];
@@ -164,7 +133,6 @@
     }
     
     NSMutableDictionary *dicOne = [[NSMutableDictionary alloc] init];
-    [dicOne setValue:Opt_Vcode forKey:@"opt"];
     [dicOne setValue:phoneStr forKey:@"mobile"];
     [dicOne setValue:@"1" forKey:@"validateType"];
     [RequestHttp requestPOSTWithDic:dicOne requestSuccess:^(id result) {

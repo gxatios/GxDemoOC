@@ -32,11 +32,6 @@
     _loginBtn.layer.cornerRadius = 5;
     _constr_height_codeview.constant = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textfieldChageAction:) name:UITextFieldTextDidChangeNotification object:nil];
-    NSString *phoneLast = [[NSUserDefaults standardUserDefaults] valueForKey:User_Login_LastInput];
-    if (phoneLast.length>0) {
-        _phoneTF.text = phoneLast;
-    }
-
 }
 - (void)textfieldChageAction:(NSNotification *)notification
 {
@@ -62,7 +57,7 @@
 {
     [super viewWillAppear:animated];
     [self starTimer];
-    BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:Login_User_IsLogin];
+    BOOL isLogin = [[NSUserDefaults standardUserDefaults] boolForKey:user_login_userid];
     if (isLogin ) {
         [_loginBtn setTitle:@"退出" forState:UIControlStateNormal];
     }else{
@@ -101,71 +96,9 @@
 }
 -(void)loginRequest
 {
-    NSString *phoneStr = _phoneTF.text;
-    NSString *pwStr = _pwTF.text;
-    if (![MacroMethodObject validatePhoneNum:phoneStr]) {
-        [MacroMethodObject showHudTextinWindow:@"请输入正确的手机号"];
-        return;
+    if (self.loginSuccessBlock) {
+        self.loginSuccessBlock();
     }
-    NSString *vcodeStr = _vcodeTF.text;
-
-    NSString *desPWStr = [MacroMethodObject encrypt3DES:pwStr key:Key_DES_PW];
-    NSMutableDictionary *dicOne = [[NSMutableDictionary alloc] init];
-    [dicOne setValue:Opt_Login forKey:@"opt"];
-    [dicOne setValue:phoneStr forKey:@"name"];
-    [dicOne setValue:desPWStr forKey:@"pwd"];
-    [dicOne setValue:vcodeStr forKey:@"randomCode"];
-    
-    [RequestHttp requestPOSTWithDic:dicOne requestSuccess:^(id result) {
-        NSString *error = [NSString stringWithFormat:@"%@",result[@"error"]];
-        if ([error isEqualToString:@"1"]) {
-            [_loginBtn setTitle:@"退出" forState:UIControlStateNormal];
-            // success
-            NSString *mobile = [NSString stringWithFormat:@"%@",result[@"mobile"]];
-            NSString *idStr = [NSString stringWithFormat:@"%@",result[@"id"]];
-            NSString *username = [NSString stringWithFormat:@"%@",result[@"userName"]];
-            NSString *headImg = [NSString stringWithFormat:@"%@",result[@"headImg"]];
-//            NSString *sex = [NSString stringWithFormat:@"%@",result[@"sex"]];
-            NSString *realName = [NSString stringWithFormat:@"%@",result[@"realName"]];
-            NSString *role = [NSString stringWithFormat:@"%@",result[@"role"]];
-            NSString *countMsgUnread = [NSString stringWithFormat:@"%@",result[@"countMsgUnread"]];
-            NSString *isSign = [NSString stringWithFormat:@"%@",result[@"isSign"]];
-            NSString *qrCode = [NSString stringWithFormat:@"%@",result[@"qrCode"]];
-            NSString *score = [NSString stringWithFormat:@"%@",result[@"score"]];
-            NSString *empRole = [NSString stringWithFormat:@"%@",result[@"empRole"]];
-            
-            [[NSUserDefaults standardUserDefaults] setValue:isSign forKey:Login_User_IsSign];
-            [[NSUserDefaults standardUserDefaults] setValue:qrCode forKey:Login_User_QrCode];
-            [[NSUserDefaults standardUserDefaults] setValue:score forKey:Login_User_Score];
-            [[NSUserDefaults standardUserDefaults] setValue:countMsgUnread forKey:Login_User_CountMsgUnread];
-            [[NSUserDefaults standardUserDefaults] setValue:role forKey:Login_User_Role]; // 0客户 1 员工
-//            [[NSUserDefaults standardUserDefaults] setValue:sex forKey:Login_User_Sex];
-            [[NSUserDefaults standardUserDefaults] setValue:headImg forKey:Login_User_HeadImg];
-            [[NSUserDefaults standardUserDefaults] setValue:idStr forKey:Login_User_Id];
-            [[NSUserDefaults standardUserDefaults] setValue:mobile forKey:Login_User_Phone];
-            [[NSUserDefaults standardUserDefaults] setValue:realName forKey:Login_User_RealName];
-            [[NSUserDefaults standardUserDefaults] setValue:username forKey:Login_User_NickName];
-            [[NSUserDefaults standardUserDefaults] setValue:empRole forKey:Login_User_Role_Emp];
-            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:Login_User_IsLogin];
-            [[NSUserDefaults standardUserDefaults] setValue:mobile forKey:User_Login_LastInput];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            [MacroMethodObject showHudTextinWindow:result[@"msg"]];
-            if (self.loginBlock) {
-                self.loginBlock();
-            }
-            [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-            
-          //  [self.navigationController popViewControllerAnimated:YES];
-        }else if ([error isEqualToString:@"-99"]) {
-            [MacroMethodObject showHudTextinWindow:result[@"msg"]];
-            _constr_height_codeview.constant = 60;
-        }else{
-            [MacroMethodObject showHudTextinWindow:result[@"msg"]];
-        }
-        
-    } requestFailure:^{
-        [MacroMethodObject showFailHudinWindow];
-    }];
 }
 
 - (IBAction)vcodeBtnDown:(id)sender {
@@ -175,9 +108,6 @@
         return;
     }
     NSMutableDictionary *dicOne = [[NSMutableDictionary alloc] init];
-    [dicOne setValue:Opt_Vcode forKey:@"opt"];
-    [dicOne setValue:phoneStr forKey:@"mobile"];
-    [dicOne setValue:@"2" forKey:@"validateType"];
     [RequestHttp requestPOSTWithDic:dicOne requestSuccess:^(id result) {
         NSString *error = [NSString stringWithFormat:@"%@",result[@"error"]];
         if ([error isEqualToString:@"1"]) {

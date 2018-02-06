@@ -1,0 +1,41 @@
+//
+//  Syetem.pch
+//  GxDemoOC
+//
+//  Created by zhxGx on 2018/2/6.
+//  Copyright © 2018年 gx. All rights reserved.
+//
+
+#ifndef Syetem_pch
+#define Syetem_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Syetem_pch */
+
+// system
+#define Is_up_Ios_9    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0)
+#define Is_up_Ios_11   ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0)
+
+
+// deveice
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+/*屏幕尺寸适配*/
+#define limitW(x) x*PhoneScreen_WIDTH/375.0
+#define limitH(x) x*PhoneScreen_HEIGHT/667.0
+
+#define M_PI     3.14159265358979323846264338327950288
+
+
+#define SafeAreaTopHeight (SCREEN_HEIGHT == 812.0 ? 88 : 64)
+#define SafeAreaBottomHeight (SCREEN_HEIGHT == 812.0 ? 34 : 0)
+
+
+
+
+/*防止Block引用循环*/
+#define WS(weakself)  __weak __typeof(&*self)weakself = self;

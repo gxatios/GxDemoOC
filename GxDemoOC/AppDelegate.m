@@ -10,21 +10,25 @@
 #import "ZWIntroductionViewController.h"
 #import <UMMobClick/MobClick.h>
 #import "LoginViewController.h"
+#import "BaseTabbarC.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) ZWIntroductionViewController *introductionView;
-
+@property (nonatomic, strong) Reachability *hostReachability;
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UMConfigInstance.appKey = @"59c9d47307fe651b28000621";
+    UMConfigInstance.appKey = @"";
     UMConfigInstance.ePolicy = BATCH;
     [MobClick startWithConfigure:UMConfigInstance];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginOutMethod) name:Notifi_Login_Out object:nil];
+     [self reachabilityNet];
+    /*退出登录通知*/
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLoginOut) name:Notifi_Login_NO object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(timerMethod) name:Notifi_Timer_Tabbar object:nil];
     BOOL isFirstLaunch = [[NSUserDefaults standardUserDefaults] boolForKey:App_Launch_First];
     if (isFirstLaunch == YES) {
         
@@ -37,8 +41,8 @@
         self.window.rootViewController = self.introductionView;
         self.introductionView.didSelectedEnter = ^(NSInteger tag) {
             if (tag==2) {
-                UIStoryboard *sB = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
-                UITabBarController *tabBar = [sB instantiateViewControllerWithIdentifier:@"TabBar"];
+                UIStoryboard *sB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                UITabBarController *tabBar = [sB instantiateViewControllerWithIdentifier:@"BaseTabbarC"];
                 weakSelf.window.rootViewController = tabBar;
             }
         };
@@ -48,11 +52,48 @@
     
     return YES;
 }
+-(void)timerMethod{
+    NSString *token = [GxUserInfo sharedInstance].token;
+    if (!token.length) {
+        NSLog(@"messageNumMethod time: no login");
+        UIViewController *rootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+        if ([rootVC isKindOfClass:[BaseTabbarC class]]) {
+            BaseTabbarC *tabVC = (BaseTabbarC*)rootVC;
+            UIViewController *vc = [tabVC.viewControllers objectAtIndex:2];
+        }
+    }else{
+        
+    }
+}
+
+-(void)reachabilityNet{
+    // 检测指定服务器是否可达
+    NSString *remoteHostName = @"www.baidu.com";
+    self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+    [self.hostReachability startNotifier];
+}
+- (void)appReachabilityChanged:(NSNotification *)notification{
+    Reachability *reach = [notification object];
+    if([reach isKindOfClass:[Reachability class]]){
+        NetworkStatus status = [reach currentReachabilityStatus];
+        // 两种检测:路由与服务器是否可达  三种状态:4g、WiFi、没有联网
+        if (reach == self.hostReachability) {
+            NSLog(@"hostReachability");
+            if ([reach currentReachabilityStatus] == NotReachable) {
+                [MacroMethodObject showHudTextinWindow:@"当前无网络连接"];
+            } else{
+               
+            }
+        }
+        
+    }
+}
 - (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier{
     return NO;
 }
 -(void)loginOutMethod{
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:Login_User_IsLogin];
+    [GxUserInfo sharedInstance].token = nil;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     LoginViewController *lvc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     lvc.hidesBottomBarWhenPushed = YES;
